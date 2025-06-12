@@ -3,9 +3,9 @@ import { Cog,Radar,Layers, ShieldCheck } from "lucide-react";
 
 const Homecards = () => {
   return (
-    <div className="ml-36  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div className="ml-22  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-9 ">
 
-      <div className="w-72 p-6 drop-shadow-2xl rounded-3xl bg-white text-center">
+      <div className="w-86 p-6 drop-shadow-2xl rounded-3xl bg-white text-center">
         <div className="flex justify-center mb-3">
           <Cog size={55} className="text-blue-500" />
         </div>
@@ -17,7 +17,7 @@ const Homecards = () => {
         </p>
       </div>
 
-      <div className="w-72 p-6 drop-shadow-2xl rounded-3xl bg-white text-center">
+      <div className="w-86 p-6 drop-shadow-2xl rounded-3xl bg-white text-center">
         <div className="flex justify-center mb-3">
             <Radar size={55} className="text-blue-500" />
         </div>
@@ -29,7 +29,7 @@ const Homecards = () => {
         </p>
       </div>
 
-      <div className="w-72 p-6 drop-shadow-2xl rounded-3xl bg-white text-center">
+      <div className="w-86 p-6 drop-shadow-2xl rounded-3xl bg-white text-center">
         <div className="flex justify-center mb-3">
           <Layers size={55} className="text-blue-500" />
         </div>
@@ -41,7 +41,7 @@ const Homecards = () => {
         </p>
       </div>
 
-      <div className="w-72 p-6 drop-shadow-2xl rounded-3xl bg-white text-center">
+      <div className="w-86 p-6 drop-shadow-2xl rounded-3xl bg-white text-center">
         <div className="flex justify-center mb-3">
           <ShieldCheck size={55} className="text-blue-500" />
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import contactHero from "../assets/contactusimage.jpg"
+import contactHero from "../assets/contactusimage.jpg";
+import LottieAnimation from "../assets/Animation - 1749704674419.json";
+import Lottie from "lottie-react";
 
 const Contactus = () => {
   const {
@@ -16,22 +18,30 @@ const Contactus = () => {
 
   return (
     <>
-    <section
+      <section
         style={{ backgroundImage: `url(${contactHero})` }}
-        className="bg-cover bg-center h-64"
-      ><div className="bg-black/50 py-16 h-64 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        className="bg-cover bg-center h-72"
+      >
+        <div className="bg-black/50 h-72 py-16 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        <div className=" py-16 h-64 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           <h1 className="m-4 text-3xl font-bold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
             Contact Us
-          </h1></div></section>
-          
+          </h1>
+        </div>
+        </div>
+      </section>
+
       <div className="flex m-6">
         <div className="mx-2 mt-6">
-          <h1 className="text-3xl font-bold mb-4 ">Let’s Collaborate!</h1>
-          <p className=" text-gray-700 mb-8">
+          <div className="w-full md:w-1/2 max-w-md mb-8 md:mb-0">
+            <Lottie animationData={LottieAnimation} loop={true} />
+          </div>
+          <h1 className="text-3xl font-bold m-4 ">Let’s Collaborate!</h1>
+          <p className=" px-4 text-gray-700 mb-8">
             Have a project or need expert support in MEP, BIM, Architecture, or
             Structural Design? We're here to help.
           </p>
-          <div className=" mb-8 space-y-1 text-sm text-gray-600">
+          <div className=" px-4 mb-8  text-sm text-gray-600">
             <p>
               📧{" "}
               <a href="mailto:info@bimqubator.com" className="underline">
@@ -104,10 +114,8 @@ const Contactus = () => {
               Send Message
             </button>
           </form>
-          
         </div>
       </div>
-      
     </>
   );
 };
