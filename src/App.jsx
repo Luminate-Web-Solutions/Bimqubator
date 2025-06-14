@@ -2,33 +2,34 @@ import React from "react";
 import "./index.css";
 import BIM from "./assets/BIM.png";
 import BIMHero from "./assets/BIMheroimage.jpeg";
-import MEP from "./assets/MEP.jpeg";
 import Homecards from "./components/Homecards";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <>
+      {/* Hero Section */}
       <section
         style={{ backgroundImage: `url(${BIMHero})` }}
-        className="bg-cover bg-center h-screen"
+        className="bg-cover bg-center h-[90vh] md:h-[100vh] w-full"
       >
-        <div className="bg-black/40 h-full flex items-center justify-center">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-            <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+        <div className="bg-black/50 h-full flex items-center justify-center">
+          <div className="text-center px-4 max-w-screen-xl mx-auto">
+            <h1 className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
               Welcome to Bimqubator
             </h1>
-            <p className="mb-8 w-200 text-lg font-normal text-white lg:text-xl sm:px-16 xl:px-48">
+            <p className="mb-8 text-base sm:text-lg lg:text-xl text-white max-w-3xl mx-auto">
               Your trusted partner in delivering cutting-edge MEP 3D Designing,
               BIM, Architecture, and Structural Design services.
             </p>
-            <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-              <a
-                href="/about"
-                className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                to="/about"
+                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-800 hover:bg-blue-800 rounded-lg transition duration-200"
               >
                 Learn more
                 <svg
-                  className="ml-2 -mr-1 w-5 h-5"
+                  className="ml-2 w-5 h-5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -39,33 +40,42 @@ function App() {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-      <p className="font-semibold text-lg bg-gray-800 py-3 text-center text-white ">
+
+      {/* Tagline */}
+      <p className="font-semibold text-base sm:text-lg bg-gray-800 py-3 text-center text-white">
         Empowering Your Vision Through Innovative Design.
       </p>
 
-      <section className="bg-white">
-        <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-          <img className="w-full" src={BIM} alt="3d modeling" />
-          <div className="mt-4 md:mt-0">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-800">
+      {/* About / Intro Section */}
+      <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <img
+            src={BIM}
+            alt="3D Modeling"
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+          <div>
+            <h2 className="mb-4 text-3xl md:text-4xl font-extrabold text-gray-800">
               Let's create more tools and ideas that bring us together.
             </h2>
-            <p className="mb-6 font-light text-gray-500 md:text-lg">
+            <p className="text-gray-600 md:text-lg font-light">
               We empower architects, engineers, and construction professionals
               with precise, collaborative, and efficient digital solutions.
             </p>
           </div>
         </div>
       </section>
-      <section className="py-8 px-6">
-        <div className="max-w-screen-2xl mx-auto ">
-          <h2 className="text-5xl font-bold text-center mb-11 px-4 ">
-            Our Services
+
+      {/* What We Offer Section */}
+      <section className="bg-gray-100 py-12 px-4">
+        <div className="max-w-screen-xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-10">
+            What We Offer
           </h2>
           <Homecards />
         </div>
@@ -73,10 +83,10 @@ function App() {
 
       {/* Highlight Section */}
       <section className="bg-blue-900 text-white py-20 px-6 md:px-24 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <h2 className="text-2xl md:text-4xl font-bold mb-6">
           Shaping Tomorrow with Smart Design.
         </h2>
-        <p className="text-lg max-w-3xl mx-auto">
+        <p className="text-base md:text-lg max-w-3xl mx-auto">
           We combine innovation and precision to deliver seamless engineering
           solutions, turning visionary concepts into impactful realities.
         </p>

@@ -8,10 +8,10 @@ const Aboutus = () => {
       {/* Hero Section */}
       <section
         style={{ backgroundImage: `url(${Hero})` }}
-        className="bg-cover bg-center h-[65vh] relative flex items-center justify-center"
+        className="bg-cover bg-center h-96 relative flex items-center justify-center"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
-        <div className="z-10 text-white text-left px-6 md:px-16 max-w-4xl">
+        <div className="z-10 mt-14 text-white text-left px-6 md:px-16 max-w-4xl">
           <h1 className="text-5xl font-bold mb-4 leading-tight">We Design The Future</h1>
           <p className="text-lg font-light w-full md:w-3/4">
             At Bimqubator, we merge innovation with precision in MEP, BIM, Architecture & Structural Design.
@@ -31,7 +31,7 @@ const Aboutus = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={Hero} alt="About us visual" className="object-cover w-full h-full" />
+            <img src={Hero} alt="About us visual" className="object-cover w-full h-120" />
           </div>
         </div>
       </section>
@@ -39,7 +39,7 @@ const Aboutus = () => {
       {/* Mission, Approach, Vision - Icon Cards */}
       <section className="py-16 px-6 md:px-24 bg-white">
         <div className="grid md:grid-cols-3 gap-10 text-center">
-          <div className="p-6 border rounded-2xl shadow hover:shadow-xl transition">
+          <div className="p-6 border rounded-2xl shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
             <Lightbulb size={48} className="mx-auto text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Our Mission</h3>
             <p>
@@ -47,7 +47,7 @@ const Aboutus = () => {
             </p>
           </div>
 
-          <div className="p-6 border rounded-2xl shadow hover:shadow-xl transition">
+          <div className="p-6 border rounded-2xl shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
             <Compass size={48} className="mx-auto text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Our Approach</h3>
             <p>
@@ -55,7 +55,7 @@ const Aboutus = () => {
             </p>
           </div>
 
-          <div className="p-6 border rounded-2xl shadow hover:shadow-xl transition">
+          <div className="p-6 border rounded-2xl shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
             <Eye size={48} className="mx-auto text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Our Vision</h3>
             <p>

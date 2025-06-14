@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import contactHero from "../assets/contactusimage.jpg";
 import LottieAnimation from "../assets/Animation - 1749704674419.json";
 import Lottie from "lottie-react";
+import { Mail, Phone, Globe } from "lucide-react";
 
 const Contactus = () => {
   const {
@@ -18,41 +19,50 @@ const Contactus = () => {
 
   return (
     <>
+      {/* Hero Section */}
       <section
         style={{ backgroundImage: `url(${contactHero})` }}
-        className="bg-cover bg-center h-72"
+        className="bg-cover bg-center h-72 relative"
       >
-        <div className="bg-black/50 h-72 py-16 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-        <div className=" py-16 h-64 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-          <h1 className="m-4 text-3xl font-bold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <h1 className="text-3xl font-bold text-white md:text-5xl lg:text-6xl text-center">
             Contact Us
           </h1>
         </div>
-        </div>
       </section>
 
-      <div className="flex m-6">
-        <div className="mx-2 mt-6">
-          <div className="w-full md:w-1/2 max-w-md mb-8 md:mb-0">
+      {/* Contact Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center p-6 md:p-16 bg-gray-50">
+        {/* Animation */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-md">
             <Lottie animationData={LottieAnimation} loop={true} />
           </div>
-          <h1 className="text-3xl font-bold m-4 ">Let’s Collaborate!</h1>
-          <p className=" px-4 text-gray-700 mb-8">
+        </div>
+
+        {/* Contact Form */}
+        <div>
+          <h2 className="text-3xl font-bold mb-2">Let’s Collaborate!</h2>
+          <p className="text-gray-700 mb-6">
             Have a project or need expert support in MEP, BIM, Architecture, or
             Structural Design? We're here to help.
           </p>
-          <div className=" px-4 mb-8  text-sm text-gray-600">
-            <p>
-              📧{" "}
-              <a href="mailto:info@bimqubator.com" className="underline">
+
+          <div className="text-sm text-gray-600 mb-6 space-y-4 font-bold">
+            <p className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-blue-500" />
+              <a href="info@bimqubator.com" className="underline">
                 info@bimqubator.com
               </a>
             </p>
-            <p>📞 +91 900-066-3628</p>
-            <p>
-              🌐{" "}
+            <p className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-blue-500" />
+              +91 900-066-3628
+            </p>
+            <p className="flex items-center gap-2">
+              <Globe className="w-4 h-4 text-blue-500" />
               <a
-                href="http://www.bimqubator.com"
+                href="https://bimqubator.com/"
                 className="underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -61,17 +71,16 @@ const Contactus = () => {
               </a>
             </p>
           </div>
-        </div>
-        <div className="max-w-4xl mx-auto p-8">
+
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-white p-6 rounded-xl shadow-md space-y-4"
+            className="bg-white p-6 rounded-xl shadow-lg space-y-4"
           >
             <input
               type="text"
               placeholder="Name"
               {...register("Name", { required: true })}
-              className="w-full border border-gray-300 p-2 rounded"
+              className="w-full border border-gray-300 p-3 rounded"
             />
             {errors.Name && (
               <p className="text-red-500 text-sm">Name is required</p>
@@ -81,7 +90,7 @@ const Contactus = () => {
               type="tel"
               placeholder="Telephone"
               {...register("Telephone", { required: true })}
-              className="w-full border border-gray-300 p-2 rounded"
+              className="w-full border border-gray-300 p-3 rounded"
             />
             {errors.Telephone && (
               <p className="text-red-500 text-sm">Telephone is required</p>
@@ -91,7 +100,7 @@ const Contactus = () => {
               type="email"
               placeholder="Email"
               {...register("Email", { required: true })}
-              className="w-full border border-gray-300 p-2 rounded"
+              className="w-full border border-gray-300 p-3 rounded"
             />
             {errors.Email && (
               <p className="text-red-500 text-sm">Email is required</p>
@@ -100,7 +109,7 @@ const Contactus = () => {
             <textarea
               placeholder="Message"
               {...register("Message", { required: true })}
-              className="w-full border border-gray-300 p-2 rounded"
+              className="w-full border border-gray-300 p-3 rounded"
               rows={4}
             />
             {errors.Message && (
