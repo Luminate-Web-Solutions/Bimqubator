@@ -12,10 +12,35 @@ const Contactus = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    
-    alert("Message submitted successfully!");
-  };
+  const onSubmit = async (data) => {
+  try {
+    const response = await fetch("https://api.bimqubator.com/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: data.Name,
+        telephone: data.Telephone,
+        email: data.Email,
+        subject: "Website Contact",
+        message: data.Message
+      })
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      alert("✅ Message submitted successfully!");
+    } else {
+      alert("❌ Submission failed: " + result.message);
+    }
+  } catch (error) {
+    console.error("Frontend Error:", error);
+    alert("❌ Something went wrong.");
+  }
+};
+
 
   return (
     <>
