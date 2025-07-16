@@ -11,7 +11,7 @@ import BimModeling from "../assets/Bim Modeling.jpg";
 import Revit from "../assets/Revit.jpg";
 import cost from "../assets/4Dcost.jpg";
 import Architect from "../assets/Architect.jpg";
-import building3d from "../assets/Building.jpg";
+import building3d from "../assets/building.jpg";
 import interior from "../assets/interior.jpg";
 import codecompliance from "../assets/codecompliance.jpg";
 import structure from "../assets/structure.jpg";
