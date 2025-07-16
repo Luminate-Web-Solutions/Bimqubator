@@ -13,7 +13,7 @@ const Contactus = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    
     alert("Message submitted successfully!");
   };
 
